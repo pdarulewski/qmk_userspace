@@ -71,10 +71,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
     [SYM] = LAYOUT_split_4x6_5(
         _______, _______, _______, _______, _______, KC_CIRC,                        KC_EQL,  _______, _______, KC_7,    KC_8,    KC_9,
-        _______, _______, _______, KC_LPRN, KC_RPRN, KC_PIPE,                        KC_MINS, KC_LBRC, KC_RBRC, KC_4,    KC_5,    KC_6,
-        _______, _______, _______, KC_LABK, KC_RABK, KC_AMPR,                        KC_UNDS, KC_LCBR, KC_RCBR, KC_1,    KC_2,    KC_3,
-        _______, _______, _______, _______, _______, _______, KC_BSPC,      KC_ENT,  KC_SLSH, KC_PLUS, KC_ASTR, _______, _______, KC_0,
-                          _______, _______, _______, _______, KC_ESC,       KC_SPC,  _______, _______, _______, _______
+        _______, _______, _______, KC_LPRN, KC_RPRN, KC_PIPE,                        KC_PLUS, KC_LBRC, KC_RBRC, KC_4,    KC_5,    KC_6,
+        _______, _______, _______, KC_LABK, KC_RABK, KC_AMPR,                        KC_MINS, KC_LCBR, KC_RCBR, KC_1,    KC_2,    KC_3,
+        _______, _______, _______, _______, _______, _______, KC_BSPC,      KC_ENT,  KC_SLSH, KC_UNDS, KC_ASTR, _______, _______, KC_0,
+                          KC_LGUI, KC_LALT, KC_LCTL, _______, KC_ENT,       KC_SPC,  _______, KC_RCTL, KC_RALT, KC_RGUI
     ),
 /*
           ~ f u n c t i o n s ~                        ┆
@@ -96,8 +96,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RM_TOGG, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                          KC_F6,   KC_F7,   KC_F8,   KC_F9 ,  KC_F10,  KC_F11,
         RM_NEXT, RM_HUEU, RM_SATU, RM_VALU, RM_SPDU, KC_VOLU,                        KC_MPRV, KC_MNXT, _______, _______, _______, KC_F12,
         RM_PREV, RM_HUED, RM_SATD, RM_VALD, RM_SPDD, KC_VOLD,                        KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
-        DF(QWE), DF(COL), _______, _______, _______, _______, KC_MUTE,      KC_MPLY, _______, _______, _______, _______, _______, _______,
-                          QK_BOOT, _______, _______, _______, _______,      _______, _______, _______, _______, _______
+        DF(QWE), DF(COL), QK_BOOT, _______, _______, _______, KC_MUTE,      KC_MPLY, _______, _______, _______, _______, _______, _______,
+                          KC_LGUI, KC_LALT, KC_LCTL, _______, KC_ENT,       KC_SPC,  _______, KC_RCTL, KC_RALT, KC_RGUI
     ),
 };
 
