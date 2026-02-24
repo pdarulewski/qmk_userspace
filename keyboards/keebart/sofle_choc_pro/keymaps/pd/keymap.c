@@ -1,5 +1,6 @@
 // clang-format off
 
+#include "color.h"
 #include "keycodes.h"
 #include "pd_config.h"
 #include "quantum_keycodes.h"
@@ -100,10 +101,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
+#define DEFAULT_COLOR HSV_MAGENTA
+
 void keyboard_post_init_user(void) {
     rgb_matrix_enable_noeeprom();
     rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_REACTIVE);
-    rgb_matrix_sethsv_noeeprom(HSV_MAGENTA);
+    rgb_matrix_sethsv_noeeprom(DEFAULT_COLOR);
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+        case QWE:
+            rgb_matrix_sethsv_noeeprom(HSV_MAGENTA);
+            break;
+        case COL:
+            rgb_matrix_sethsv_noeeprom(HSV_CYAN);
+            break;
+        case SYM:
+            rgb_matrix_sethsv_noeeprom(HSV_CORAL);
+            break;
+        case FUN:
+            rgb_matrix_sethsv_noeeprom(HSV_CHARTREUSE);
+            break;
+        default:
+            rgb_matrix_sethsv_noeeprom(DEFAULT_COLOR);
+            break;
+    }
+    return state;
 }
 
 /* template
